@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Exemplo de while loop com variavel de controle
+  let totalGastos = 0;
+  let numeroAmigos = 0;
+  while (true) {
+    const gasto = parseFloat(prompt("digite o valor gasto(ou '0'para encerrar):"));
+if (gasto === 0) {
+    break;
+}  
+totalGastos += gasto;
+numeroAmigos++;
+}
+const mediaGastos = totalGastos / numeroAmigos;
+console.log(`A média dos gastos por amigo é:R$ ${mediaGastos}`);
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // variaveismcontadoras de votos 
+        let votosJairBolsonaro
+        let votosLula
+        let votosDilma
+        let votosNulo
+        let votosBranco
+
+        // laço de repetição 
+
+        while (true) {
+            const voto = parseInt(prompt("digite o numero do seu candidato (1 a 5) ou 6 para encerrar"));
+        
+        if (voto === 6) {
+            break;
+        } else if (voto === 1) {
+            votosJairBolsonaro++;
+        } else if (voto === 2) {
+            votosLula++;
+        } else if (voto === 3) {
+            votosDilma++;
+        } else if (voto === 4) {
+            votosNulo++;
+        } else if (voto === 5) {
+            votosBranco++;
+        } else {
+            window.alert("Opção invalida. Digite novamente.");
+        }
+    }
+        // Calcula o total de votos
+        const totalVotos = votosJairBolsonaro + votosLula + votosDilma + votosNulo + votosBranco
+
+        // calcula as porcentagens
+        const percentualNulo = (votosNulo / totalVotos) + 100;
+        const percentualBranco = (votosBranco / totalVotos) + 100;
+
+        let vencedor = "nenhum";
+        if (votosJairBolsonaro > votosLula && votosJairBolsonaro > votosDilma) {
+            vencedor = "jair Bolsonaro";
+        } else if (votosLula > votosJairBolsonaro && votosDilma > votosLula) {
+            vencedor = "Lula"
+        } else if (votosDilma > votosJairBolsonaro && votosDilma > votosLula) {
+        }
+
+        window.alert(`Votos para Jair Bolsonaro: ${votosJairBolsonaro}`);
+        window.alert(`Votos para Lula: ${votosLula}`);
+        window.alert(`Votos para Dilma: ${votosDilma}`);
+        window.alert(`Votos para Nulo: (${votosNulo} %)`);
+        window.alert(`Votos em Branco: (${votosBranco} %)`);
+        window.alert(`candidato eleito para a presidencia: ${vencedor}`);
+    </script>
+</body>
+
+</html>
