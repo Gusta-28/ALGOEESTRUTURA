@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <h3> Calcular a Media</h3>
+    <h3>numero 1</h3>
+    <input type="text" placeholder="informe um numero" id="n1">
+    <h3>numero 2</h3>
+    <input type="text" placeholder="informe o segundo numero" id="n2">
+    <input type="submit" onclick="media(); return false">
+    </form>
+
+    <script>
+        function media(){
+            Varn1 = parseFloat(document.getElementById("n1")).value;
+            Varn2 = parseFloat(document.getElementById("n2")).value;
+            var media = (n1 + n2)/2
+            window.alert(`A média entre ${n1} e ${n2} é: ${resultado}`)
+
+        }
+    </script>
+</body>
+</html>

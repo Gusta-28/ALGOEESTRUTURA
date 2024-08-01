@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form>
+        <h3>Login</h3>
+        <input type="text" placeholder="Login" id="Login">
+        <h3>Senha</h3>
+        <input type="password" placeholder="Senha" id="Senha">
+        <h3></h3>
+        <input type="submit" onclick="logar(); return false">
+    </form>
+
+    <script>
+        function logar(){
+            var Login = document.getElementById('Login').value;
+            var Senha = document.getElementById('Senha').value;
+
+            if (Login == "Gustavo" && Senha == "2020"){
+                alert("sucesso!")
+                location.href="https://github.com/Gusta-28"
+            } else{
+                alert("usuario ou senha incorreta")
+            }
+        }
+
+
+    </script>
+</body>
+</html>
