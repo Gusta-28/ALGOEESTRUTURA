@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form id="alunoform">
+    <label for="nome">Nome do aluno</label>
+    <input type="text" id="nome" nome="nome"><br><br>
+
+    <label for="faltas">Numero de faltas</label>
+    <input type="number" id="faltas" nome="faltas"><br><br>
+
+    <label for="media">Media aluno</label>
+    <input type="number" step="0.01" id="media" nome="media"><br><br>
+
+    <button type="button" onclick="lerDadosAluno()">Adicionar aluno</button>
+  </form>
+
+  <div id="listagemAlunos"></div>
+
+  <script src="botaoAluno.js"></script>
+</body>
+</html>
