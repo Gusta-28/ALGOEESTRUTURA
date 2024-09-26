@@ -21,18 +21,23 @@
         let numeros = [];
 
         document.getElementById('Armazenar').onclick = function(){
-        let recebedoura = parseFloat(document.getElementById('recebedora').value);
-        numeros.push(recebedoura);
+        let recebedora = parseFloat(document.getElementById('recebedora').value);
+        if (!isNaN(recebedora)){
+        numeros.push(recebedora);
+        document.getElementById('recebedora').value = '';
         }
+      }
         document.getElementById('encontrarMenor').onclick = function(){
-        if (numeros.length>0 && numeros.length<10){
+        if (numeros.length > 0){
           let menorNumero = numeros[0]
-            for (let i=1; i< 10; i++){
+            for (let i=1; i< numeros.length; i++){
               if (numeros[i] < menorNumero){
                 menorNumero = numeros[i];
               }
             }
-            document.getElementById('resultado').innerHTML="os numeros digitados foram:" + numeros.join(", ") + "O menor numero digitado foi:" + nenorNumero;
+            document.getElementById('resultado').innerText= "os numeros digitados foram:" + numeros.join(", ") + "\n O menor numero digitado foi:" + menorNumero;
+        } else{
+          document.getElementById('resultado').innerText= "nenhum numero foi armazenado"
         }
       }
 
